@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[COMPONENT]: Input It should render input 1`] = `
+<div>
+  <input
+    class=""
+  />
+</div>
+`;
