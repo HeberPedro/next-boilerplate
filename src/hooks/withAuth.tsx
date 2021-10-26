@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router'
 import { ElementType, useEffect } from 'react'
-import Cookie from 'js-cookie'
+import { parseCookies } from 'nookies'
 
-const withAuth = (WrappedComponent: ElementType) =>{
+const withAuth = (WrappedComponent: ElementType) => {
   const Wrapper = (props: unknown) => {
     const router = useRouter()
 
     useEffect(() => {
-      const token = Cookie.get('token')
+      const token = parseCookies(null, 'token')
 
       if (!token) {
         router.replace('/')
